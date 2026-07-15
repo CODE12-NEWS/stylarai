@@ -14,20 +14,18 @@
         --accent-2: #9b8cff;
       }
 
-      * {
-        box-sizing: border-box;
-      }
+      * { box-sizing: border-box; }
 
       body {
         margin: 0;
         font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
         background: linear-gradient(135deg, var(--bg), #132a43);
         color: var(--text);
-        line-height: 1.6;
+        line-height: 1.7;
       }
 
       .container {
-        width: min(1120px, calc(100% - 2rem));
+        width: min(1160px, calc(100% - 2rem));
         margin: 0 auto;
       }
 
@@ -48,31 +46,30 @@
       }
 
       .nav a {
-        color: var(--text);
+        color: var(--muted);
         text-decoration: none;
         margin-left: 1rem;
-        color: var(--muted);
       }
 
       .hero {
         display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
+        grid-template-columns: 1.15fr 0.85fr;
         gap: 2rem;
         align-items: center;
-        padding: 4rem 0 3rem;
+        padding: 4rem 0 2.5rem;
       }
 
       .hero h1 {
-        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        font-size: clamp(2.2rem, 4vw, 3.6rem);
         line-height: 1.1;
         margin: 0 0 1rem;
       }
 
       .hero p {
         color: var(--muted);
-        font-size: 1.05rem;
+        font-size: 1.06rem;
         margin-bottom: 1.6rem;
-        max-width: 650px;
+        max-width: 700px;
       }
 
       .hero-actions {
@@ -90,9 +87,7 @@
         transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
 
-      .btn:hover {
-        transform: translateY(-2px);
-      }
+      .btn:hover { transform: translateY(-2px); }
 
       .btn-primary {
         background: linear-gradient(90deg, var(--accent), var(--accent-2));
@@ -118,54 +113,31 @@
         padding: 1.6rem;
       }
 
-      .hero-card h2 {
-        margin-top: 0;
-        margin-bottom: 0.8rem;
-      }
+      .hero-card h2 { margin-top: 0; margin-bottom: 0.7rem; }
+      .hero-card ul { padding-left: 1rem; color: var(--muted); }
 
-      .hero-card ul {
-        padding-left: 1rem;
-        color: var(--muted);
-      }
+      .section { padding: 2rem 0 3rem; }
+      .section-title { text-align: center; margin-bottom: 1.5rem; }
+      .section-title h2 { font-size: 1.8rem; margin-bottom: 0.4rem; }
+      .section-title p { color: var(--muted); margin: 0; }
 
-      .section {
-        padding: 2rem 0 3rem;
-      }
+      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+      .feature { padding: 1.2rem; }
+      .feature h3 { margin-top: 0; margin-bottom: 0.5rem; }
+      .feature p { margin: 0; color: var(--muted); }
 
-      .section-title {
-        text-align: center;
-        margin-bottom: 1.5rem;
-      }
-
-      .section-title h2 {
-        font-size: 1.8rem;
-        margin-bottom: 0.4rem;
-      }
-
-      .section-title p {
-        color: var(--muted);
-        margin: 0;
-      }
-
-      .grid {
+      .story {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
+        margin-top: 1rem;
       }
 
-      .feature {
-        padding: 1.2rem;
+      .story .card {
+        padding: 1.4rem;
       }
 
-      .feature h3 {
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-      }
-
-      .feature p {
-        margin: 0;
-        color: var(--muted);
-      }
+      .story h3 { margin-top: 0; }
 
       footer {
         padding: 2rem 0 3rem;
@@ -174,14 +146,8 @@
       }
 
       @media (max-width: 760px) {
-        .hero {
-          grid-template-columns: 1fr;
-          padding-top: 2rem;
-        }
-
-        .grid {
-          grid-template-columns: 1fr;
-        }
+        .hero, .story, .grid { grid-template-columns: 1fr; }
+        .hero { padding-top: 2rem; }
       }
     </style>
   </head>
@@ -202,8 +168,10 @@
         <div>
           <h1>Human-centered AI for a smarter, healthier life.</h1>
           <p>
-            Stylar AI Studio creates intelligent digital experiences that support
-            wellness, beauty, online English learning, and personalized daily assistance.
+            Stylar AI Studio designs intelligent digital experiences that support wellness,
+            beauty, online English learning, and personalized daily assistance. We combine
+            thoughtful product design with practical AI technology to help people feel more
+            informed, supported, and confident in everyday life.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#solutions">Explore Our Products</a>
@@ -232,30 +200,52 @@
           <article class="card feature">
             <h3>Health & Wellness</h3>
             <p>
-              We design AI apps that help users stay informed, supported, and engaged in their personal care journey.
+              We create AI apps that help users monitor routines, receive meaningful guidance,
+              and stay engaged in their personal care journey with confidence and clarity.
             </p>
           </article>
 
           <article class="card feature">
             <h3>Beauty & Aesthetics</h3>
             <p>
-              Our tools make beauty guidance more intuitive, personalized, and accessible through smart digital experiences.
+              Our tools make beauty guidance more intuitive, tailored, and accessible through
+              smart interactions that feel natural and motivating.
             </p>
           </article>
 
           <article class="card feature">
             <h3>Online English Learning</h3>
             <p>
-              We build interactive AI-driven learning platforms that improve speaking, listening, and confidence in real time.
+              We build adaptive AI-driven learning platforms that improve speaking, listening,
+              and fluency in real time while keeping learners motivated and supported.
             </p>
           </article>
 
           <article class="card feature">
             <h3>Personal AI Assistant</h3>
             <p>
-              Every experience is shaped around the individual, helping users receive the right support at the right moment.
+              Every experience is shaped around the individual, helping users receive the right
+              support at the right moment with less friction and more relevance.
             </p>
           </article>
+        </div>
+
+        <div class="story">
+          <div class="card">
+            <h3>Why Stylar AI</h3>
+            <p>
+              We believe technology should feel helpful rather than overwhelming. That is why
+              every product we build focuses on clarity, personalization, and human connection.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Our Approach</h3>
+            <p>
+              From health support to language learning, we design AI experiences that are simple,
+              accessible, and truly useful in everyday life. Our goal is to make intelligent tools
+              feel calm, reliable, and easy to trust.
+            </p>
+          </div>
         </div>
       </section>
     </main>
