@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stylar AI Studio</title>
+    <style>
+      :root {
+        --bg: #07111f;
+        --panel: #0f2038;
+        --text: #f4f7fb;
+        --muted: #aab8c8;
+        --accent: #6ee7f9;
+        --accent-2: #9b8cff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+        background: linear-gradient(135deg, var(--bg), #132a43);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 1.2rem 0;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .brand {
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .nav a {
+        color: var(--text);
+        text-decoration: none;
+        margin-left: 1rem;
+        color: var(--muted);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 2rem;
+        align-items: center;
+        padding: 4rem 0 3rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        line-height: 1.1;
+        margin: 0 0 1rem;
+      }
+
+      .hero p {
+        color: var(--muted);
+        font-size: 1.05rem;
+        margin-bottom: 1.6rem;
+        max-width: 650px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.9rem 1.2rem;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        color: #03101b;
+        box-shadow: 0 10px 30px rgba(110, 231, 249, 0.2);
+      }
+
+      .btn-secondary {
+        color: var(--text);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        padding: 1.3rem;
+        backdrop-filter: blur(16px);
+      }
+
+      .hero-card {
+        padding: 1.6rem;
+      }
+
+      .hero-card h2 {
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+      }
+
+      .hero-card ul {
+        padding-left: 1rem;
+        color: var(--muted);
+      }
+
+      .section {
+        padding: 2rem 0 3rem;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-title h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .section-title p {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .feature {
+        padding: 1.2rem;
+      }
+
+      .feature h3 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+
+      .feature p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      footer {
+        padding: 2rem 0 3rem;
+        text-align: center;
+        color: var(--muted);
+      }
+
+      @media (max-width: 760px) {
+        .hero {
+          grid-template-columns: 1fr;
+          padding-top: 2rem;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">Stylar AI Studio</div>
+        <nav>
+          <a href="#solutions">Solutions</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <h1>Human-centered AI for a smarter, healthier life.</h1>
+          <p>
+            Stylar AI Studio creates intelligent digital experiences that support
+            wellness, beauty, online English learning, and personalized daily assistance.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#solutions">Explore Our Products</a>
+            <a class="btn btn-secondary" href="#contact">Book a Demo</a>
+          </div>
+        </div>
+
+        <div class="card hero-card" id="about">
+          <h2>What We Build</h2>
+          <ul>
+            <li>AI-powered health and wellness support tools</li>
+            <li>Smart beauty and aesthetics experiences</li>
+            <li>Online English learning with adaptive AI guidance</li>
+            <li>Personalized AI assistants tailored to every user</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="solutions">
+        <div class="section-title">
+          <h2>Our Core Solutions</h2>
+          <p>Built to make advanced AI feel practical, helpful, and human.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card feature">
+            <h3>Health & Wellness</h3>
+            <p>
+              We design AI apps that help users stay informed, supported, and engaged in their personal care journey.
+            </p>
+          </article>
+
+          <article class="card feature">
+            <h3>Beauty & Aesthetics</h3>
+            <p>
+              Our tools make beauty guidance more intuitive, personalized, and accessible through smart digital experiences.
+            </p>
+          </article>
+
+          <article class="card feature">
+            <h3>Online English Learning</h3>
+            <p>
+              We build interactive AI-driven learning platforms that improve speaking, listening, and confidence in real time.
+            </p>
+          </article>
+
+          <article class="card feature">
+            <h3>Personal AI Assistant</h3>
+            <p>
+              Every experience is shaped around the individual, helping users receive the right support at the right moment.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div class="container">
+        <p>Stylar AI Studio — Intelligent experiences for modern life.</p>
+      </div>
+    </footer>
+  </body>
+</html>
